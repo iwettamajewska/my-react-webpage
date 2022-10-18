@@ -4,7 +4,7 @@ import Navigation from "./components/Navigation";
 import Forest from "./components/Forest";
 import Expert from "./components/Expert";
 import Footer from "./components/Footer";
-import ServicesList from "./components/ServicesList";
+import BoxesList from "./components/BoxesList";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Navigation />
       <Forest />
       <Expert />
-      <ServicesList />
+      <BoxesList />
       <Footer />
     </body>
   );
