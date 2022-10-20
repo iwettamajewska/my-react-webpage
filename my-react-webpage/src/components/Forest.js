@@ -1,12 +1,12 @@
 const Forest = () => {
   return (
-    <header class="img-forest container">
-      <div class="img-text-container">
-        <h2 class="long-text">
+    <header className="img-forest container">
+      <div className="img-text-container">
+        <h2 className="long-text">
           Nasza firma oferuje najwyższej jakości produkty.
         </h2>
-        <p class="short-text">Nie wierz nam na słowo - sprawdź</p>
-        <a class="text-in-rectangle link" href="#offer">
+        <p className="short-text">Nie wierz nam na słowo - sprawdź</p>
+        <a className="text-in-rectangle link" href="#offer">
           oferta
         </a>
       </div>
