@@ -1,14 +1,5 @@
 import Box from "./Box";
 
-// W pliku BoxesList.js masz dwa komponenty - to nie przejdzie (oprócz BoxesList masz również RedDotAndText), nie ze względu na to, że aplikacja się posypie, tylko to nie jest zgodne z dobrymi praktykami. 1 plik - 1 komponent
-const RedDotAndText = (
-  <>
-    <br />
-    (nowość)
-    <div className="small-circle"></div>
-  </>
-);
-
 const BoxesList = () => {
   const boxes = [
     {
@@ -17,22 +8,29 @@ const BoxesList = () => {
     },
     {
       name: "Usługa 2",
+      isNew: false,
     },
     {
       name: "Usługa 3",
+      isNew: false,
     },
     {
       name: "Usługa 4",
+      isNew: false,
     },
     {
       name: "Usługa 5",
+      isNew: false,
     },
     {
       name: "Usługa 6",
+      isNew: false,
     },
   ];
 
-  const BoxesMap = boxes.map((box, index) => <Box key={index} box={box} />);
+  const BoxesMap = boxes.map((box, index) => (
+    <Box key={index} isNew={box.isNew} name={box.name} />
+  ));
 
   return (
     <section id="offer" className="about-company container">
