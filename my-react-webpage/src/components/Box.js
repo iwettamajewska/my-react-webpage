@@ -1,28 +1,16 @@
 import "./BoxesList";
 
 const Box = ({ name, isNew }) => {
+  const boxClass = isNew ? "box box1" : "box";
+
   return (
-    <div className="box box1">
+    <div className={boxClass}>
       {name}
-      {isNew}
+      <br />
+      {isNew && <>(nowość)</>}
+      {isNew && <div className="small-circle"></div>}
     </div>
   );
 };
-
-// const isNew = () => {
-//   <>
-//     <br />
-//     (nowość)
-//     <div className="small-circle"></div>
-//   </>;
-// };
-
-if (isNew === true) {
-  <>
-    <br />
-    (nowość)
-    <div className="small-circle"></div>
-  </>;
-}
 
 export default Box;
