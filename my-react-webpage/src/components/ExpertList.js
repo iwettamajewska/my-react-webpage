@@ -1,9 +1,32 @@
 import Expert from "./Expert";
 
-const ExpertList = () => {
-  const TwoExperts = [1, 2];
+const twoExperts = [
+  {
+    name: "Jan Kowalski",
+    department: "Marketing",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    name: "Anna Kowalska",
+    department: "Finance",
+    description:
+      "Morbi vel massa et lacus egestas cursus a non magna. Fusce scelerisque blandit nunc, id malesuada ex lobortis a. Integer felis nisi, tempor elementum lorem in, varius pellentesque ligula. Duis efficitur lacinia enim, non tincidunt libero ultrices in.",
+  },
+];
 
-  const ExpertsMap = TwoExperts.map((index) => <Expert key={index} index />);
+const ExpertList = () => {
+  const ExpertsMap = twoExperts.map(
+    ({ name, department, description }, index) => (
+      <Expert
+        key={index}
+        index={index}
+        name={name}
+        department={department}
+        description={description}
+      />
+    )
+  );
 
   return (
     <section id="about-us" className="about-us-container">
